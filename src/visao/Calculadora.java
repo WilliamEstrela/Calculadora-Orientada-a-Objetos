@@ -98,96 +98,96 @@ public class Calculadora {
 		frame.getContentPane().add(campoDeTexto);
 		campoDeTexto.setColumns(10);
 		
-		JButton button = new JButton("1");
-		button.addActionListener(new ActionListener() {
+		JButton button1 = new JButton("1");
+		button1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setFildAndAddListCount("1");
 			}
 		});
-		button.setBounds(15, 90, 41, 29);
-		frame.getContentPane().add(button);
+		button1.setBounds(15, 90, 41, 29);
+		frame.getContentPane().add(button1);
 		
-		JButton button_1 = new JButton("2");
-		button_1.addActionListener(new ActionListener() {
+		JButton button2 = new JButton("2");
+		button2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				setFildAndAddListCount("2");
 			}
 		});
-		button_1.setBounds(71, 90, 41, 29);
-		frame.getContentPane().add(button_1);
+		button2.setBounds(71, 90, 41, 29);
+		frame.getContentPane().add(button2);
 		
-		JButton button_2 = new JButton("3");
-		button_2.addActionListener(new ActionListener() {
+		JButton button3 = new JButton("3");
+		button3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setFildAndAddListCount("3");
 			}
 		});
-		button_2.setBounds(127, 90, 41, 29);
-		frame.getContentPane().add(button_2);
+		button3.setBounds(127, 90, 41, 29);
+		frame.getContentPane().add(button3);
 		
-		JButton button_3 = new JButton("4");
-		button_3.addActionListener(new ActionListener() {
+		JButton button4 = new JButton("4");
+		button4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setFildAndAddListCount("4");
 			}
 		});
-		button_3.setBounds(15, 129, 41, 29);
-		frame.getContentPane().add(button_3);
+		button4.setBounds(15, 129, 41, 29);
+		frame.getContentPane().add(button4);
 		
-		JButton button_4 = new JButton("5");
-		button_4.addActionListener(new ActionListener() {
+		JButton button5 = new JButton("5");
+		button5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setFildAndAddListCount("5");
 			}
 		});
-		button_4.setBounds(71, 129, 41, 29);
-		frame.getContentPane().add(button_4);
+		button5.setBounds(71, 129, 41, 29);
+		frame.getContentPane().add(button5);
 		
-		JButton button_5 = new JButton("6");
-		button_5.addActionListener(new ActionListener() {
+		JButton button6 = new JButton("6");
+		button6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setFildAndAddListCount("6");
 			}
 		});
-		button_5.setBounds(127, 129, 41, 29);
-		frame.getContentPane().add(button_5);
+		button6.setBounds(127, 129, 41, 29);
+		frame.getContentPane().add(button6);
 		
-		JButton button_6 = new JButton("7");
-		button_6.addActionListener(new ActionListener() {
+		JButton button7 = new JButton("7");
+		button7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setFildAndAddListCount("7");
 			}
 			
 		});
-		button_6.setBounds(15, 163, 41, 29);
-		frame.getContentPane().add(button_6);
+		button7.setBounds(15, 163, 41, 29);
+		frame.getContentPane().add(button7);
 		
-		JButton button_7 = new JButton("8");
-		button_7.addActionListener(new ActionListener() {
+		JButton button8 = new JButton("8");
+		button8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setFildAndAddListCount("8");
 			}
 		});
-		button_7.setBounds(71, 163, 41, 29);
-		frame.getContentPane().add(button_7);
+		button8.setBounds(71, 163, 41, 29);
+		frame.getContentPane().add(button8);
 		
-		JButton button_8 = new JButton("9");
-		button_8.addActionListener(new ActionListener() {
+		JButton button9 = new JButton("9");
+		button9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setFildAndAddListCount("9");
 			}
 		});
-		button_8.setBounds(127, 163, 41, 29);
-		frame.getContentPane().add(button_8);
+		button9.setBounds(127, 163, 41, 29);
+		frame.getContentPane().add(button9);
 		
-		JButton button_9 = new JButton("0");
-		button_9.addActionListener(new ActionListener() {
+		JButton button0 = new JButton("0");
+		button0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				setFildAndAddListCount("0");
 			}
 		});
-		button_9.setBounds(71, 199, 41, 29);
-		frame.getContentPane().add(button_9);
+		button0.setBounds(71, 199, 41, 29);
+		frame.getContentPane().add(button0);
 		
 		JButton button_10 = new JButton("+");
 		button_10.addActionListener(new ActionListener() {
