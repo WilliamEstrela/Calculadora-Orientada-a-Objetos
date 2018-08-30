@@ -7,12 +7,14 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import controle.Controle;
+import modelo.Operacao;
 import modelo.Soma;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
+import javax.swing.JComboBox;
 
 public class Calculadora {
 
@@ -21,6 +23,7 @@ public class Calculadora {
 	
 	
 	ArrayList<String> listaDeConta = new ArrayList<String>();
+	
 	
 	/**
 	 * Launch the application.
@@ -222,5 +225,19 @@ public class Calculadora {
 		});
 		button_12.setBounds(212, 129, 63, 29);
 		frame.getContentPane().add(button_12);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(298, 94, 104, 20);
+		
+		Controle c = new Controle();
+		ArrayList<Operacao> operacoes = c.operacoesSuportadas();
+		
+		for(int i=0; i< operacoes.size(); i++) {
+			comboBox.addItem(operacoes.get(i).toString());
+		}
+		
+		
+		frame.getContentPane().add(comboBox);
+		
 	}
 }

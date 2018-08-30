@@ -33,4 +33,10 @@ public abstract class Operacao {
 		this.operandos.clear();
 	}
 	
+	@Override
+	public String toString() {
+		return this.getOperador();
+		
+	}
+
 }
