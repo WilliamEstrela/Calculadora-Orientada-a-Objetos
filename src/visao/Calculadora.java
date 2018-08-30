@@ -45,8 +45,9 @@ public class Calculadora {
 		initialize();
 	}
 	
-	public void setTextFild(String numero) {
-		this.campoDeTexto.setText(numero.toString());
+	public void setFildAndAddListCount(String numero) {
+		this.campoDeTexto.setText(numero);
+		listaDeConta.add(numero);
 	}
 
 	/**
@@ -100,8 +101,7 @@ public class Calculadora {
 		JButton button = new JButton("1");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				setTextFild("1");
-				listaDeConta.add("1");
+				setFildAndAddListCount("1");
 			}
 		});
 		button.setBounds(15, 90, 41, 29);
@@ -110,8 +110,7 @@ public class Calculadora {
 		JButton button_1 = new JButton("2");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				setTextFild("2");
-				listaDeConta.add("2");
+				setFildAndAddListCount("2");
 			}
 		});
 		button_1.setBounds(71, 90, 41, 29);
@@ -120,8 +119,7 @@ public class Calculadora {
 		JButton button_2 = new JButton("3");
 		button_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				setTextFild("3");
-				listaDeConta.add("3");
+				setFildAndAddListCount("3");
 			}
 		});
 		button_2.setBounds(127, 90, 41, 29);
@@ -130,8 +128,7 @@ public class Calculadora {
 		JButton button_3 = new JButton("4");
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				setTextFild("4");
-				listaDeConta.add("4");
+				setFildAndAddListCount("4");
 			}
 		});
 		button_3.setBounds(15, 129, 41, 29);
@@ -140,8 +137,7 @@ public class Calculadora {
 		JButton button_4 = new JButton("5");
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				setTextFild("5");
-				listaDeConta.add("5");
+				setFildAndAddListCount("5");
 			}
 		});
 		button_4.setBounds(71, 129, 41, 29);
@@ -150,8 +146,7 @@ public class Calculadora {
 		JButton button_5 = new JButton("6");
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				setTextFild("6");
-				listaDeConta.add("6");
+				setFildAndAddListCount("6");
 			}
 		});
 		button_5.setBounds(127, 129, 41, 29);
@@ -160,8 +155,7 @@ public class Calculadora {
 		JButton button_6 = new JButton("7");
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				setTextFild("7");
-				listaDeConta.add("7");
+				setFildAndAddListCount("7");
 			}
 			
 		});
@@ -171,8 +165,7 @@ public class Calculadora {
 		JButton button_7 = new JButton("8");
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				setTextFild("8");
-				listaDeConta.add("8");
+				setFildAndAddListCount("8");
 			}
 		});
 		button_7.setBounds(71, 163, 41, 29);
@@ -181,8 +174,7 @@ public class Calculadora {
 		JButton button_8 = new JButton("9");
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				setTextFild("9");
-				listaDeConta.add("9");
+				setFildAndAddListCount("9");
 			}
 		});
 		button_8.setBounds(127, 163, 41, 29);
@@ -191,8 +183,7 @@ public class Calculadora {
 		JButton button_9 = new JButton("0");
 		button_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				setTextFild("0");
-				listaDeConta.add("0");
+				setFildAndAddListCount("0");
 			}
 		});
 		button_9.setBounds(71, 199, 41, 29);
@@ -201,8 +192,7 @@ public class Calculadora {
 		JButton button_10 = new JButton("+");
 		button_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				setTextFild("+");
-				listaDeConta.add("+");
+				setFildAndAddListCount("+");
 			}
 		});
 		button_10.setBounds(212, 90, 63, 29);
@@ -211,8 +201,7 @@ public class Calculadora {
 		JButton button_11 = new JButton("-");
 		button_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				setTextFild("-");
-				listaDeConta.add("-");
+				setFildAndAddListCount("-");
 			}
 		});
 		button_11.setBounds(212, 163, 63, 29);
@@ -222,7 +211,6 @@ public class Calculadora {
 		button_12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				button_12.setText("sqr()");
-				listaDeConta.add("sqrt");
 			}
 		});
 		button_12.setBounds(212, 129, 63, 29);
