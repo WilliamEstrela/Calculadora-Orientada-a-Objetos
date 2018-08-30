@@ -46,7 +46,14 @@ public class Calculadora {
 	}
 	
 	public void setFildAndAddListCount(String numero) {
-		this.campoDeTexto.setText(numero);
+		String numeros;
+		
+		numeros = campoDeTexto.getText()+numero;
+		
+		this.campoDeTexto.setText(numeros);
+
+		
+		
 		listaDeConta.add(numero);
 	}
 
