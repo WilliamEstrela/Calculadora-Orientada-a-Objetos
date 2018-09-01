@@ -20,9 +20,10 @@ public class Calculadora {
 
 	private JFrame frame;
 	private JTextField campoDeTexto;
+	private String operadorSelecionado;
+	private JComboBox comboBox;
 	
-	
-	ArrayList<String> listaDeConta = new ArrayList<String>();
+	ArrayList<Double> listaDeConta = new ArrayList<Double>();
 	
 	
 	/**
@@ -52,13 +53,10 @@ public class Calculadora {
 		String numeros;
 		
 		numeros = campoDeTexto.getText()+numero;
-		
 		this.campoDeTexto.setText(numeros);
-
-		
-		
-		listaDeConta.add(numero);
+	
 	}
+	
 
 	/**
 	 * Initialize the contents of the frame.
@@ -70,31 +68,31 @@ public class Calculadora {
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnCalcular = new JButton("Calcular");
+		
 		btnCalcular.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				Controle controle = new Controle();
-				
-				
-				
-				
-				Soma s;
-				if(listaDeConta.get(1) == "+") {
-					s = new Soma();
-					
-					double operando1 = Double.parseDouble(listaDeConta.get(0));
-					double operando2 = Double.parseDouble(listaDeConta.get(2));
-					
-					s.addOperando(operando1);
-					s.addOperando(operando2);
-					Double resultado;
-					resultado = controle.Calcular(s);
-					String total2 = String.valueOf(resultado);
-					campoDeTexto.setText(total2);
 		
+				Controle controle = new Controle();
 					
-				}
-				
+					Operacao selecionado = (Operacao) comboBox.getSelectedItem();
+					
+					int numeroOperandos = selecionado.getNumeroOperandos();
+					
+					for(int i=0; i< numeroOperandos; i++) {
+						
+						
+						Double operando = listaDeConta.get(i);
+						
+						selecionado.addOperando(operando);
+						
+					}
+		
+						
+					Double resultado = selecionado.calcular();
+					
+					campoDeTexto.setText(String.valueOf(resultado));
+					System.out.println(resultado);
+	
 	
 			
 				
@@ -199,45 +197,41 @@ public class Calculadora {
 		button0.setBounds(71, 199, 41, 29);
 		frame.getContentPane().add(button0);
 		
-		JButton button_10 = new JButton("+");
-		button_10.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setFildAndAddListCount("+");
-			}
-		});
-		button_10.setBounds(212, 90, 63, 29);
-		frame.getContentPane().add(button_10);
-		
-		JButton button_11 = new JButton("-");
-		button_11.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				setFildAndAddListCount("-");
-			}
-		});
-		button_11.setBounds(212, 163, 63, 29);
-		frame.getContentPane().add(button_11);
-		
-		JButton button_12 = new JButton("sqrt");
-		button_12.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				button_12.setText("sqr()");
-			}
-		});
-		button_12.setBounds(212, 129, 63, 29);
-		frame.getContentPane().add(button_12);
-		
-		JComboBox comboBox = new JComboBox();
+		comboBox = new JComboBox();
 		comboBox.setBounds(298, 94, 104, 20);
 		
 		Controle c = new Controle();
 		ArrayList<Operacao> operacoes = c.operacoesSuportadas();
 		
 		for(int i=0; i< operacoes.size(); i++) {
-			comboBox.addItem(operacoes.get(i).toString());
+			comboBox.addItem(operacoes.get(i));
 		}
 		
 		
 		frame.getContentPane().add(comboBox);
 		
+		JButton button = new JButton("Clear");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				campoDeTexto.setText("");
+				listaDeConta.clear();
+			}
+		});
+		button.setBounds(127, 199, 63, 29);
+		frame.getContentPane().add(button);
+		
+		JButton button_1 = new JButton("add");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//TODO converter o texto digitado em string
+				Double numero = Double.parseDouble(campoDeTexto.getText());
+				listaDeConta.add(numero);
+				
+			}
+		});
+		button_1.setBounds(212, 202, 63, 29);
+		frame.getContentPane().add(button_1);
+		
 	}
+	
 }

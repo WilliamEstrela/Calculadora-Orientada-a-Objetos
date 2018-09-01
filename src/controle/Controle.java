@@ -22,6 +22,11 @@ public class Controle {
 		operacaoSuportadas.add(new RaizQuadrada());
 	}
 	
+	public String getOperacao(Operacao obj) {
+		return obj.getOperador();
+		
+	}
+	
 	public ArrayList<Operacao> operacoesSuportadas() {
 		return operacaoSuportadas;
 	}
