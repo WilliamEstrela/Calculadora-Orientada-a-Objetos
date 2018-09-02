@@ -99,12 +99,12 @@ public class Calculadora {
 		btnCalcular.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				String campoDeTexto = campoDeTexto.getText();
+				String texto = campoDeTexto.getText();
 				
 				Operacao operacao = getOpracao();
 				int max = operacao.getNumeroOperandos();
 				
-				cutAndAddOperando(campoDeTexto, operacao, max);
+				cutAndAddOperando(texto, operacao, max);
 				calcAndSetText(operacao);
 		
 			}
